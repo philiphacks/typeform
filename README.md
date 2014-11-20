@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Please refer to the [Typeform Data API Documentation]()
+Please refer to the [Typeform Data API Documentation](http://helpcenter.typeform.com/hc/en-us/articles/200071986-Data-API) for more information about the API, or follow the examples below:
 
 ```ruby
 require 'typeform'
@@ -37,7 +37,7 @@ complete_entries = form.complete_entries
 newest_entries = form.complete_entries(since: Time.now.to_i)
 ```
 
-For now, this returns the default format returned by the Typeform API. I have some thoughts on how they should structure their data and how they can conform with [Hypermedia APIs](http://en.wikipedia.org/wiki/Hypermedia), but the current implementation allows you to build your custom logic on top of the responses.
+For now, the wrapper returns the default format as returned by the Typeform Data API. I have some thoughts on how they should structure their data and how they can be build a [Hypermedia APIs](http://en.wikipedia.org/wiki/Hypermedia), but the current implementation allows you to build your custom logic on top of the responses (e.g. your pagination logic).
 
 ## Contributing
 
