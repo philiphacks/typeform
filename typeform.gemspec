@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Philip De Smedt"]
   spec.email         = ["philip.desmedt@gmail.com"]
   spec.summary       = "A Ruby interface to the Typeform Data API"
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.description   = "Implements the complete functionality of the Typeform Data API v0"
+  spec.homepage      = "https://github.com/philipdesmedt/typeform"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
-
-  spec.add_dependency "faraday"
-  spec.add_dependency "json"
+  spec.add_runtime_dependency "hashie", "~> 3.0.0"
+  spec.add_runtime_dependency "httparty"
+  spec.add_runtime_dependency "json"
 end
