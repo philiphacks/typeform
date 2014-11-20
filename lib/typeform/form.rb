@@ -15,20 +15,25 @@ module Typeform
       Hashie::Mash.new(response)
     end
 
-    def complete_entries
+    def complete_entries(params = {})
+      response = get(params.merge(completed: true))
+      Hashie::Mash.new(response)
     end
 
-    def incomplete_entries
+    def incomplete_entries(params = {})
+      response = get(params.merge(completed: false))
+      Hashie::Mash.new(response)
     end
 
     private
       def get(params = nil)
-        Typeform.get uri_for(params), :query => { key: Typeform.api_key }
+        params ||= {}
+        params[:key] = Typeform.api_key
+        Typeform.get uri, :query => params
       end
 
-      def uri_for(params = nil)
-        params = "?#{params}" if params
-        "/form/#{form_id}#{params}"
+      def uri
+        "/form/#{form_id}"
       end
   end
 

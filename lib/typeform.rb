@@ -9,12 +9,12 @@ module Typeform
   class << self
     # Allow Typeform.api_key = "..."
     def api_key=(api_key)
-      self.api_key = api_key
+      Typeform.api_key = api_key
     end
 
     # Allow Typeform.base_uri = "..."
     def base_uri=(uri)
-      self.base_uri uri
+      Tyepform.base_uri uri
     end
   end
 
