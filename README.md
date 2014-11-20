@@ -34,7 +34,7 @@ incomplete_entries = form.incomplete_entries
 complete_entries = form.complete_entries
 
 # Fetches all complete entries since today
-newest_entries = form.complete_entries(since: Time.now.to_i)
+newest_entries = form.complete_entries(since: Date.today.to_time.to_i)
 ```
 
 For now, the wrapper returns the default format as returned by the Typeform Data API. I have some thoughts on how they should structure their data and how they can be build a [Hypermedia APIs](http://en.wikipedia.org/wiki/Hypermedia), but the current implementation allows you to build your custom logic on top of the responses (e.g. your pagination logic).
