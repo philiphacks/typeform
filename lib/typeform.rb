@@ -14,7 +14,7 @@ module Typeform
 
     # Allow Typeform.base_uri = "..."
     def base_uri=(uri)
-      Tyepform.base_uri uri
+      Typeform.base_uri = uri
     end
   end
 
@@ -44,7 +44,7 @@ module Typeform
       'Content-Type' => 'application/json; charset=utf-8',
       'Accept-Encoding' => 'gzip, deflate'
     })
-    base_uri @@base_uri
+    self.base_uri @@base_uri
 
     class << self
       # Get the API key (Typeform::Typeform.api_key)
@@ -55,9 +55,6 @@ module Typeform
         return @@api_key unless api_key
         @@api_key = api_key
       end
-
-      # Get the Base URI.
-      def base_uri; @@base_uri end
 
       def get(*args); handle_response super end
       # No POST, PUT or DELETE for now - Read only Typeform API
