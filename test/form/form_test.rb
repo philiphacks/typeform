@@ -2,7 +2,7 @@ require './test/test_helper'
 
 class TypeformFormTest < Minitest::Test
   def setup
-    Typeform.api_key = ENV["TYPEFORM_API_KEY"]
+    Typeform.api_key = 'some-key'
   end
 
   def test_exists
@@ -11,7 +11,7 @@ class TypeformFormTest < Minitest::Test
 
   def test_it_gives_back_a_single_form
     VCR.use_cassette('one_form') do
-      form = Typeform::Form.new(ENV["TYPEFORM_ID"])
+      form = Typeform::Form.new('some-questionnaire')
       assert_equal Typeform::Form, form.class
 
       entries = form.all_entries
