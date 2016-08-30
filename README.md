@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Please refer to the [Typeform Data API Documentation](http://helpcenter.typeform.com/hc/en-us/articles/200071986-Data-API) for more information about the API, or follow the examples below:
+Please refer to the [Typeform Data API Documentation](https://www.typeform.com/help/data-api/) for more information about the API, or follow the examples below:
 
 ```ruby
 require 'typeform'
