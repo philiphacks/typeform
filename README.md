@@ -1,3 +1,5 @@
+**WARNING: This project is no longer being maintained. The v1 Typeform API has been deprecated. You can use https://github.com/Typeform/create-api-gem if you still need a Ruby wrapper.**
+
 # Typeform
 
 Typeform is a Ruby gem that provides a wrapper for interacting with the Typeform Data API.
